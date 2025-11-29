@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://mtjtnnr7c3el"]
+
+[ext_resource type="Script" uid="uid://hwnygxjbd0rq" path="res://holder.gd" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://coqc58bx3qssx" path="res://base card/BaseCard.tscn" id="1_wtcfe"]
+
+[node name="holder" type="Node2D"]
+script = ExtResource("1_0e48y")
+
+[node name="BaseCard" parent="." instance=ExtResource("1_wtcfe")]
+position = Vector2(57, 221)
+
+[node name="BaseCard2" parent="." instance=ExtResource("1_wtcfe")]
+position = Vector2(232, 217)
+
+[node name="BaseCard3" parent="." instance=ExtResource("1_wtcfe")]
+position = Vector2(424, 216)
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
